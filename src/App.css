@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+:root{ 
+  --green-background:#DAF7A6;
+  --gray:#F2F3EF;
+  --blue:#357AE4;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{ 
+  margin:0; 
+  padding:0; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{ 
+  background-color:var(--green-background);
+
+}
+
+.card{ 
+    width:350px;
+    background-color:white;
+    margin:5em auto;
+    padding:20px;
+    display:grid; 
+    grid-template-columns:1fr;
+    grid-template-rows:3fr,repeat(6,1fr);
+    justify-content:center; /*starts the content in the center*/
+    justify-items:center; /*puts the actual items in the center*/
+    
+}
+
+
+
+  img{ 
+    width:200px; 
+    height:200px;
+    border-radius:50%;
+    grid-column:1/2;
   }
+  
+  button{ 
+  width:5em;
+  border:none;
+  border-radius:5px;
+  background-color:var(--gray);
+  padding:5px;
+  margin-right:10px;
+  margin-bottom:3px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover{ 
+  background-color:var(--green-background);
 }
 
-.App-link {
-  color: #61dafb;
+.click{ 
+  margin-bottom:10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /*------------------------icons-------------------------------*/ 
+  i{ 
+    margin:3px;
+    
   }
-  to {
-    transform: rotate(360deg);
+  
+  .fa-heart{
+    color:red;
   }
+  
+  .fa-linkedin-in{ 
+    color:var(--blue); 
+  }
+/*==============================    Mobile   ======================*/
+
+/*--------------------profile card-------*/
+@media(max-width:370px){
+
+body{ 
+  background-color:antiquewhite;
+}
+
+img{ 
+  height:150px;
+  width:150px;
+ 
+}
+
+.card{
+  background-color:orange;
+  width:200px;
+  
+}
+
+button:hover{ 
+  background-color:antiquewhite;
+}
+
 }
